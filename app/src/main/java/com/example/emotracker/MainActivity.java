@@ -10,10 +10,14 @@ import android.widget.Button;
 import com.example.emotracker.R;
 import com.example.emotracker.RecognitionActivity;
 import com.example.emotracker.RegisterActivity;
+import com.example.emotracker.face_recognition.FaceClassifier;
+
+import java.util.HashMap;
 
 
 public class MainActivity extends AppCompatActivity {
 
+//    public static HashMap<String, FaceClassifier.Recognition> registered = new HashMap<>();
 
     Button registerBtn,recognizeBtn;
     @Override

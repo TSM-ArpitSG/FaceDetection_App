@@ -26,6 +26,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
+    aaptOptions{
+        noCompress "tflite"
+    }
 }
 
 dependencies {
@@ -43,5 +46,12 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    // TensorFlow Lite
+    implementation 'org.tensorflow:tensorflow-lite:2.9.0'
+    // Optional TensorFlow Lite Support Library
+    implementation 'org.tensorflow:tensorflow-lite-support:0.3.0'
+
+    // Optional GPU delegate
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.9.0'
     implementation libs.face.detection
 }
