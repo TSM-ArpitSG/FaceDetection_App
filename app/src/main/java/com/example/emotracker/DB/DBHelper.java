@@ -110,7 +110,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 floatArray[i] = embeddingFloat.get(i);
             }
             bigArray[0] = floatArray;
-            embeddingFloat.remove(embeddingFloat.size()-1);
+//            embeddingFloat.remove(embeddingFloat.size()-1);
             FaceClassifier.Recognition recognition = new FaceClassifier.Recognition(res.getString(res.getColumnIndex(FACE_COLUMN_NAME)),bigArray);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 registered.putIfAbsent(recognition.getTitle(),recognition);
