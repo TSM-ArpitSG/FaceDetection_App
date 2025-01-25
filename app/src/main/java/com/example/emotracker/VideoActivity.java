@@ -163,12 +163,12 @@ public class VideoActivity extends AppCompatActivity {
                                     Log.d("FaceDetection", "length: " + faces.size());
                                     for (Face face : faces) {
                                         Rect bounds = face.getBoundingBox();
-                                        Paint p1 = new Paint();
-                                        p1.setColor(Color.GREEN);
-                                        p1.setStyle(Paint.Style.STROKE);
-                                        p1.setStrokeWidth(5);
+//                                        Paint p1 = new Paint();
+//                                        p1.setColor(Color.GREEN);
+//                                        p1.setStyle(Paint.Style.STROKE);
+//                                        p1.setStrokeWidth(5);
                                         performFaceRecognition(bounds,input);
-                                        canvas.drawRect(bounds,p1);
+//                                        canvas.drawRect(bounds,p1);
 
                                     }
                                     runOnUiThread(() -> {
@@ -197,9 +197,14 @@ public class VideoActivity extends AppCompatActivity {
             Log.d("TryFR", recognition.getTitle()+" "+ recognition.getDistance());
             if(recognition.getDistance()<1){
                 Paint p1 = new Paint();
-                p1.setColor(Color.RED);
-                p1.setTextSize(70);
-                canvas.drawText(recognition.getTitle(),bound.left,bound.top,p1);
+                p1.setColor(Color.GREEN);
+                p1.setStyle(Paint.Style.STROKE);
+                p1.setStrokeWidth(5);
+                canvas.drawRect(bound,p1);
+                Paint p2 = new Paint();
+                p2.setColor(Color.WHITE);
+                p2.setTextSize(70);
+                canvas.drawText(recognition.getTitle(),bound.left,bound.top,p2);
 
             }
         }

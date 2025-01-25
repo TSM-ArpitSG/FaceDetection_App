@@ -240,7 +240,7 @@ public class RecognitionActivity extends AppCompatActivity {
             if(recognition.getDistance()<1){
                 Paint p1 = new Paint();
                 p1.setColor(Color.RED);
-                p1.setTextSize(200);
+                p1.setTextSize(30);
                 canvas.drawText(recognition.getTitle(),bound.left,bound.top,p1);
 
             }

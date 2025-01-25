@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Root layout of MainActivity which uses ConstraintLayout for flexible and responsive positioning of UI components -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- ImageView to display the app logo, centered horizontally and placed at the top of the layout -->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
@@ -18,6 +20,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
+    <!-- Button for navigating to the RegisterActivity. It's designed to be visually appealing and user-friendly with large touch targets. -->
     <Button
         android:id="@+id/buttonregister"
         android:layout_width="0dp"
@@ -31,6 +34,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Button for navigating to the RecognitionActivity. Placed below the register button and also designed for easy interaction. -->
     <Button
         android:id="@+id/buttonrecognize"
         android:layout_width="0dp"
@@ -38,7 +42,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="80dp"
-        android:text="Recognize "
+        android:text="Recognize"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
