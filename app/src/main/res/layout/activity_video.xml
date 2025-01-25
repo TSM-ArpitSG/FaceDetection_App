@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ExoPlayer View -->
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/player_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSelectVideo"
+        app:surface_type="texture_view" />
+
+    <!-- ImageView for displaying detected faces, initially invisible and placed just above the player controls -->
+    <ImageView
+        android:id="@+id/imageOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnSelectVideo"
+        android:visibility="gone"
+        android:background="#CC000000"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:paddingBottom="16dp"/>
+
+    <!-- Button for selecting video -->
+    <Button
+        android:id="@+id/btnSelectVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Select Video"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

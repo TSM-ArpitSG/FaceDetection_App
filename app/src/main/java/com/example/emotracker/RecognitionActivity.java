@@ -107,6 +107,7 @@ public class RecognitionActivity extends AppCompatActivity {
             galleryActivityResultLauncher.launch(galleryIntent);
         });
 
+
         cameraCard.setOnClickListener(view -> {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 if (!allPermissionsGranted()) {
@@ -116,6 +117,14 @@ public class RecognitionActivity extends AppCompatActivity {
                 }
             } else {
                 openCamera();
+            }
+        });
+
+        findViewById(R.id.button_video).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RecognitionActivity.this, VideoActivity.class);
+                startActivity(intent);
             }
         });
 

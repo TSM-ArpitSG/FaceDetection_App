@@ -53,5 +53,6 @@ dependencies {
 
     // Optional GPU delegate
     implementation 'org.tensorflow:tensorflow-lite-gpu:2.9.0'
+    implementation 'com.google.android.exoplayer:exoplayer:2.16.1'
     implementation libs.face.detection
 }
